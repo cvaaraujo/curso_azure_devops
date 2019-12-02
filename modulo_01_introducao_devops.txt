@@ -1,0 +1,776 @@
+Curso: Azure DevOps - Integração Continua e Entrega Continua 
+
+É uma prática de desenvolvimento de software de DevOpsem que os desenvolvedores, com frequência, juntam suas alterações de código em um repositório central. Depois disso, criações e testes são executados. Geralmente, a integração contínua se refere ao estágio de criação ou integração do processo de lançamento de software. além de originar um componente de automação (ex.: uma CI ou serviço de criação) e um componente cultural (ex.: aprender a integrar com frequência.
+
+Os principais objetivos da integração contínua são encontrar e investigar bugs mais rapidamente, melhorar a qualidade do software e reduzir o tempo que leva para validar e lançar novas atualizações de software. 
+
+Por que a integração contínua é necessária?
+
+No passado, os desenvolvedores de uma equipe podiam trabalhar isoladamente por um longo período e só juntar suas alterações à ramificação mestre quando concluíssem seu trabalho. Dessa forma, a junção das alterações de códigos era difícil e demorada, alé de resultar no acúmulo de erros sem correção por longos períodos. Estes fatores dificultavam uma distribuição de atualizações rápida para os clientes. 
+
+Como funciona a integração contínua?
+
+Com a integração continuada, os desenvolvedores frequentemente confirmam um repositório compartilhado usando um sistema de controle de versão, como o Git. Antes de cada confirmação, os desenvolvedores podem escolher executar testes de unidade locais em seus códigos como uma camada de verificação extra anterior à integração. Um serviço de integração contínua cria e executa automaticamente testes de unidade nas novas alterações de código para destacar imediatamente todos os erros. 
+
+Continuous Integration
+
+-> v1.1	-> Source Control (Commit Changes) - Automated -> Build (Run Build and Unit Tests) - Automated -> Staging (Deploy to test environment run integration tests, load tests, and other tests) -> Production (Deploy to production environment).
+
+A integração contínua é referente aos estágios de criação e teste de unidade do processo de lançamento de software. Cada revisão confirmada aciona criação e testes automatizados. 
+
+Com a distribuição contínua, as alterações de código são criadas, testadas e preparadas automaticamente para que a produção seja liberada. A distribuição contínua expande com base na integração contínua ao implantar todas as alterações de código em um ambiente de teste e/ou ambiente de produção, após o estágio de criação. 
+
+Benefícios da integração continua 
+
+-> Melhore a produtividade do desenvolvedor
+
+A integração contínua ajuda sua equipe a ser mais produtiva ao liberar os desenvolvedores de tarefas manuais e encorajar comportamentos que ajudam a reduzir o número de erros de bugs implantados para os clientes. 
+
+-> Encontre e investigue bugs mais rapidamente
+
+Com testes mais frequentes, sua equipe pode descobrir e investigar bugs mais cedo, antes que no futuro os problemas cresçam demais.
+
+-> Distribua atualizações mais rapidamente
+
+A integração contínua ajuda a sua equipe a distribuir atualizações para os clientes mais rapidamente e com maior frequência. 
+
+Você praticar a integração contínua com o AWS CodePipeline, que permite criar um fluxo de trabalho que compila no AWS CodeBuild todas vezes que você confirma uma alteração. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Entrega contínua
+
+A entrega contínua, uma vez que os processos estão instalados e usados regularmente, oferece a opção de ciclos de desenvolvimento de software muito mais rápido. Em vez de liberar o código uma ou duas vezes por ano, as empresas que realizam entrega contínua tem a opção de liberá-lo várias vezes por dia. 
+
+Quando você está lançando atualizações com essa frequência, cada versão tem um tamanho reduzido - talvez apenas uma única linha de código. Por isso, o risco para a estabilidade do sistema e para o atendimento ao cliente é infinitamente menor. 
+
+Além disso, é mais fácil de reverter e testar cada mudança: se houver uma falha, a identificação também pode ser feita com mais rapidez. Uma empresa pode não querer lançar o novo código várias vezes por dia, mas o que importa é que a possibilidade existirá para o time realizar os testes necessários. 
+
+Isso torna muito mais viável testar continuamente pequenas mudanças em seus sistemas. Por exemplo, você pode querer ver se um botão azul "comprar agora" na página inicial faz as pessoas agirem mais rapidamente do que o seu botão verde atual (teste A/B). Com práticas contínuas de entrega em funcionamento, você pode testar essa mudança pra ver se ela realmente pode ser implementada. E você pode limitar para apenas uma pequena porcentagem de visitantes do site para ver como eles respondem. Os comentários dessas experiências ajudam os gerentes de negócios a tomar melhores decisões em relação aos produtos da empresa. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Introdução ao DevOps
+
+O que é DevOps?
+
+Por que você deve adotar o DevOps no seu projeto ou na sua empresa?
+
+Vamos traçar uma linha do tempo para exeplorar a história por trás do DevOps. 
+
+Vamos explorar também os seus conceitos.
+
+Vamos falar de CAMS, acrônimo para Cultura, Automação, Medição e Compartilhamento
+
+Vamos falar sobre os pilares do DevOps. Que é o PPT (Pessoas, Processos, Tecnologias)
+
+Vamos ter uma rápida conversa sobre as principais etapas e ferramentas para incorporar DevOps na sua emrpesa.
+
+Outro importante que teremos é um paradigma entre a Cultura Devops e a Metodolgia Àgil tão presente em Projeto de TO hoje em dia. 
+
+O que não é DevOps? E o que você não deve fazer.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+O que é DevOps?
+
+Como obter rapidamente uma compreensão do que é o termo DevOps com as melhores práticas como se preparar para mudar uma cultura dentro da sua organização. Isso nos permitirá construir os fundamentos dos conceitos de DevOps. 
+
+A palavra DevOps deriva da junção de duas áreas. 
+
+Dev -> Desenvolvimento
+
+Ops -> Operação (Suporte, Sustentação, Infraestrutura)
+
+O que é DevOps?
+
+DevOps é uma Framework? Não.
+
+DevOps é uma Ferramenta? Não. 
+
+DevOps é uma Tecnologia? Não. 
+
+A melhor definição do que é DEVOPS é CULTURA.
+
+Mas, o que é Cultura?
+
+1) As crenças, costumes, artes, etc, de uma determinada sociedade, grupo, lugar, ou tempo.
+
+2) Uma sociedade particular que tem suas próprias crenças, modos de vida, arte, etc.
+
+3) Um modo de pensar, comportar-se ou trabalhar que existe em um lugar ou organização (como um negócio). 
+
+DevOps é uma cultura com uma maneira de pensar se comportando ou trabalhando em um lugar ou organização (como um negócio).
+
+E quando digo Cultura, digo sim, ele é uma framework, são diversas ferramentas, que tem muita tecnologia envolvida. 
+
+Essa cultura provê principalmente uma maneira das pessoas trabalharem em uma organização usando o processo definidos e utilizando ferramentas de automação, para tornar o trabalha de área mais eficaz e menos manual. 
+
+DevOps é uma cultura
+
+A definição de Devops é muito vasto. Cada autor pode ter a sua definição um pouco diferente dos demais pois diferente da metodologia ágil não existe um manifesto que orienta sobre o que é ou que não é DevOps. Porém, vamos recorrer ao Wikipedia. 
+
+Segundo ela, o termo DevOps deriva da junção das palavras Desenvolvimento e Operações sendo uma prática de Engenharia de Software que possui o intuito de unificar o desenvolvimento de software e operações de software. 
+
+A característica principal do movimento DevOps é defender fortemente a automação e monitoramento em todas as fases de construção de software: integração, teste, liberação para implantação e gerenciamento de infraestrutura. Devops pretende fornecer ciclos de desenvolvimento menores, frequência de implantação aumentada, operações mais seguras e alinhamento próximo com objetivo do negócio. Apesar de ser uma boa definição vamos colocar de maneira mais clara e objetiva as suas características. 
+
+Pontos obrigatórios para saber se você tem ou não uma cultura DevOps implantado na sua empresa
+
+-> Colaboração entre as Equipes (dev + ops) 
+Com o objetivo de priorizar a comunicação e compartilhamento de conhecimentos entre todos. 
+
+-> Desenvolvimento Ágil 
+Utilizando versionamento de código e validação da qualidade com ferramentas. Não confunda com Metodologia Ágil. Você deve e também pode utilizar Projetos em Cascata. 
+
+-> Fornecer Ciclos de Entregas Rápida
+Entregar Software rapidamente. Sem perder dias para liberar versões. 
+
+-> integração contínua e Entrega Contínua no seu produto
+
+-> Testar
+Integrar na Integração Contínua. Ferramentas de Testes Contínuo que fornece um feedback sobre os riscos do negócio. 
+
+-> Implementar Gerência de Configuração de Software (GCS)
+Através do código para facilitar a sua operação. 
+
+-> Centralizar Logs
+Deixando de maneira rápida e fácil o acesso a todos os logs do seu produto. 
+
+-> Monitorar e Coletar Métricas
+Monitorando o desempenho das aplicações, verificação de disco, processador e também o nível de experiência do usuário final. 
+
+-> Infraestrutura rápido e fácil para implantar e escolar. 
+
+-> Automatizar
+Sem tarefas repetidas e manuais. 
+
+O escopo do DevOps é muito amplo mas centrado todo na TI
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Aula 3 - Por que devo adotar a cultura DevOps?
+
+Talvez algumas dessas frases a seguir seja familiar para você no seu dia a dia principalmente se você já tem uma certa experiência no desenvolvimento de software.
+
+Os desenvolvedores dizem:
+
+"Na minha máquina funciona, já no ambiente de produção..."
+
+Analistas de Infra:
+
+"Eu não tenho capacidade de reposição..."
+
+Analistas de Teste:
+
+"Nossos ambientes de testes não são realistas..."
+
+Suporte:
+
+"Estou sempre apagando incêncdios."
+
+Gestores:
+
+"O que a equipe está fazendo?"
+"Eu preciso da nova funcionalidade agora."
+
+Esses são problemas comuns na velocidade do teu time e qualidade durante todo ciclo de vida do software. 
+
+Se algumas dessas frases fazem parte do seu dia a dia vc precisa conhecer e adotar a Cultura DevOps na sua organização. 
+
+Outro motivo vem sendo levantando pelo Garner desde a edição de 2015. De acordo com o Garner em seu documento ele cita:
+
+Até 2018 a transição para a prática de TI Ágil Devops se tornará tão disruptiva para TI quanto a adoção do Lean foi para a fabricação durante os anos 80, ou seja, DevOps é inevitável. 
+
+Se você não tem certeza se deve entrar na Cultura DevOps vamos listar 7 razões para você se encorajar ou pelo menos experimentar:
+
+1) Com a adoção de DevOps teremos ciclos de desenvolvimento mais curtos. Inovação mais rápido. Quando a Equipe de Desenvolvimento e Operação estão em áreas separadas trabalhando de forma isolada e individualizada é difícil afirmar se um aplicativo ou serviço está pronto para entrar em produção. Quando a Equipe de Desenvolvimento entregam esse produto o tempo do ciclo das operações são estendidos desnecessariamente mas com uma Equipe combinada de desenvolvimento e operações trabalhando em conjunto comunicando-se, colaborando e compartilhando as informações os aplicativos estão prontos para uso muito mais rapidamente e isso é muito importante ja que as empresas obtem sucesso com base em sua capacidade de inovar velocidade, qualidade é tudo nos negócios. Quanto mais rápido entregar maior o sucesso em relação aos seus concorrentes. 
+
+2) Diminuição de Tarefas Manuais
+Se é doloroso e você faz isso com mais frequência aprende a fazer melhor e mais rápido e evite o trabalho manual. Para isso você vai utilizar a automação e fluxos de trabalho. 
+
+3) Riscos relativamente Baixos.
+DevOps reduz o risco por meio da automação e desenvolvimento orientado por teste, do código de aplicativo e da infraestrutura. Além disso, você consegue detectar rapidamente problemas por meio do monitoramento a aprimorar.
+
+4) Falhas e Reversões e Tempo Reduzido na recuperação de servidores
+Infelizmente os desenvolvedores falham na programação de código e algumas dessas falhas irá passar pelos testes. O ciclo de desenvolvimento mais curtos após a implementação de DevOps promove liberações de códigos mais frequentes. Com isso conseguimos identificar mais rapidamente os defeitos do código. As equipes podem reduzir o número de falhas de implantação usando o principio de programação ágil que exige colaboração e programação modular e até mesmo utilizando arquitetura baseado em serviços. Os roolbacks são igualmente mais fáceis de gerenciar porque quando necessário apenas alguns módulos ou serviços são afetados. O tempo para recuperar servidores é uma questão importante porque alguma falha tem que ser esperada. Mas a recuperação é muito mais rápida quando as equipes de desenvolvimento e operações trabalham juntas trocando ideias e aplicando desafios de ambas durante o desenvolvimento. 
+
+5) Melhorar Colaboração e Comunicação e mais COnfiabilidade
+DevOps melhora a cultura de desenvolvimento de software. DevOps não entregar os aplicativos as Operações e esperar para ver o que acontece. As operações não precisam esperar por uma Equipe diferente para solucionar e corrigir o problema. O processo se torna cada vez mais contínuo a medida que todos trabalham na mesma direção com um objetivo em comum. E um dos fatores para isso acontecer é que equipe trablhando em conjunto são mais felizes e mais produtivas. A cultura torna-se focada no desempenho e não nos objetivos comuns. A meta deve ser sempre conjunta e não por área. Quando as equipes confiam uma nas outras elas podem experiemntar e inovar de maneira mais eficaz. 
+
+6) Maior Eficiência
+O aumento da eficiência ajuda a acelerar o processo de desenvolvimento e torná-lo menos propenso a erros. Por exemplo, a automação contínua automatiza o processo de teste de código reduzindo a quantidade de trabalho manual necessário. 
+
+7) Custos Reduzidos e Headcount de TI
+Os custos serão reduzidos justamente por causa da dimuição de tarefas repetitivas. O Headcount significa redistribuir o time em atividades focada no negócio e não em atividades manuais. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+História do DevOps
+
+Primeiro vamos ao ano de 1957. Os primeiros programadores escreveram código usando o FORTRAN. Já em 1969, o ARPANET criado pelo Departamento de Defesa dos Estados Unidos foi a primeira rede de computador operacional a base de comutação de pacotes, ele é visto como o precursos da Internet e foi criado apenas para fins militares. Foi lançada criando os primeiros empregos de Engenharia de Rede e Centros de Operações de Rede.  
+
+No final de 2001 nasceu o Manifesto Agi, trata-se de uma organização sem fins lucrativos que procura promover o conhecimento e discussões sobre os vários métodos ágeis. Em 2003 foi lançado o Google SRE. Basicamente o time SRE é responsável pela disponibilidade, latência, desempenho, eficiência, gerenciamento de mudança, monitoramento, resposta a emrgencia e planos de capacidades. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Principais Conceitos que envolve a Cultura DevOps
+
+O termo DevOps significa Dev referindo-se aos desenvolvedores e Ops referindo-se a Operação. É mais recente tendência em desenvolvimento de software, onde os desenvolvedores trabalham em conjunto com a equipe de operação para garantir que o software seja executado de forma eficiente e sem falhas. Atualmente muitas Equipes de Desenvolvimento de Software estão seguindo o caminho DevOps que não está apenas ajudando as empresas a lidar com a pressão para produzir códigos de qualidade mas também ajudando a entregá-las com mais rapidez. 
+
+O conceito DevOps enfatiza a comunicação, colaboração, integração entre desenvolvedores de software e o pessoal de operação de tecnologia da informação. 
+
+Vamos ver como Dev e Ops funcionam analisando de forma isolada. 
+
+Os desenvolvedores querem mudança contínua e sempre adicionar novos recursos ao produto. 
+
+A operação quer estabilidade contínua e criar novos serviços. E no Centro dos dois temos o Negócio. O Business da nossa empresa ou do nosso cliente. 
+
+Vamos pensar um pouco no seguinte cenário:
+
+Depois de meses de construção a Equipe de Desenvolvedores lança um novo produto. Com isso a equipe de Operação tem a missão de manter o Software no ar e sem falhas. Uma vez que o software é entregue para o ambiente de produção, o departamento de operações evita fazer alterações no software para garantir a estabilidade. Mas, o produto infelizmente não é perfeito. Aliás, nenhum é. Precisa de correções de bugs e implentação de novos recursos para melhorar o software. O desenvolvimento quer que as mudanças sejam lançadas rapidamente na produção. E com isso começam os conflitos. 
+
+O desenvolvimento precisa liberar rapidamente novas versões, a Operação quer apenas manter no ar e sofre com a implementação de uma nova versão. Produtos de maneira geral sofre alterações no seu dia-a-dia. Seja um aplicativo Web, uma app para o celular ou mesmo um simples serviço. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CAMS
+
+Até agora vimos que DevOps é uma Cultura e problemas que você pode resolver com a adoção dessa Cultura. Vamos explorar mais os conceitos por trás do DevOps falando sobre CAMS. 
+
+O termo CAMS foi criado por Damon Edwards e John Willis no Vale do Silício nos anos 90 e início dos 2000 como uma maneira de definir a cultura da empatia. 
+
+Já em 2010 John Willis escreveu um artigo sobre os Pilares do DevOps era o CAMS.
+
+O que é o CAMS?
+
+CAMS é um acrônimo para Culture, Automation, Measurement, Sharing (Cultura, Automação, Medição, Compartilhamento). 
+
+Vamos abordar cada um desses quatro ítens. 
+
+Cultura
+
+Pessoas e processos primeiro. Se você não tiver Cultura todas as tentativas de Automação não terá sucesso. O relacionamento é importante na Cultura. Suas funções incluem:
+
+-> Envolva-se cedo, envolva-se com frequência.
+
+-> Destruir silos, desenvolvimento e operação trabalhando juntos.
+
+-> Esteja aberto a opções. 
+
+-> Pare de culṕar. 
+
+-> Comunique-se com outros colegas.
+
+-> Envolva todas as pessoas nos principais processos e decisões. 
+
+-> Pergunte, sempre pergunte. 
+
+-> Nunga diga nunca
+
+-> Stand-ups diários, convide todos e seja breve.
+
+Automação
+
+-> Aspecto mais visível do DevOps. É o que mais trás pessoas a conhecer os conceitos envolvidos no DevOps. Isso acontece porque muitas pessoas se concentram no ganho de produtividade, principalmente Gerente de Projetos que buscam sempre o trabalho produzido pelo valor por hora. Mas automação é usada não apenas para economizar tempo gerando mais lucros para o projeto mas também para 
+
+-> Evitar defeitos. 
+
+-> Criar consistência no software
+
+-> Focar na qualidade
+
+-> Não desperdiçar tempo com tarefas manuais. 
+
+A Automação está presente ao adotar ferramentas para gerenciamento de versões, provisionamento, gerenciamento de configuração, integração de sistemas, monitoramento, controle, orquestração, e tornam-se peças importantes para o DevOps.
+
+Vamos pensar no seguinte cenário:
+
+Você tem uma equipe com 4 desenvolvedores e 2 testers. Os desenvolvedores produzem muito bem. E todos dias liberam pelo menos quatro novas funcionalidades. E essas novas funcionalidades devem ser testadas pelos especialistas em testes funcionais. Para subir para o ambiente de testes, as novas funcionalidades o desenvolvedor demora cerca de 15 minutos. Como são 4 novas funcionalidades realizadas diariamente ele irá perder 1 hora por dia apenas para realizar a tarefa de fazer o deploy no ambiente de testes. Em uma semana seriam 5 horas e em 1 mês pode chegar a mais de 20 horas. No ano seriam 240 horas. Em um ano essa empresa pode estar perdendo 1 mês de trabalho porque não automatizou o deploy da aplicação no ambiente de testes. E esse é um dos principais motivos para a automação estar presente no DevOps. As máquinas são realmente boas em fazer as tarefas várias vezes, e não o ser o humano. 
+
+Principais tarefas que podemos automatizar
+
+-> Podemos automatizar Builds
+
+-> Implantações
+
+-> Verificação da Qualidade da Codificação
+
+-> Testes, seja ele funcional ou de unidades
+
+-> Monitoramento
+
+-> Lançamentos do sistema, ou seja os rollouts.
+
+-> Configurações de sistema
+
+Medição
+
+Se você não consegue medir você não pode melhorar. Uma implementação de DevOps bem sucedida medirá tudo o que puder com a frequência possível 
+
+-> Você pode e deve ter Métricas de Desempenho
+
+-> Métricas de Processo
+
+-> Métricas de pessoas
+
+Precisamos basear as decisões em dados aos invés de instintos, levando a um caminho de melhoria objetiva e sem culpa. Os dados devem ser 
+
+-> Transparentes 
+
+-> Acessíveis a todos
+
+-> Significativos
+
+-> Capazes de serem visualizados para um fim específico
+
+Compartilhamento
+
+O sucesso do DevOps em qualquer organização é compartilhar as ferramentas, descobertas e principalmente as lições. O compartilhamento deixa a equipe se sentindo energizada, informada de novas formas de inovar. 
+
+-> Precisamos sempre compartilhar ideias
+
+-> Compartilhar Métricas
+
+-> Compartilhar Resultados
+
+-> Compartilhar Sucessos
+
+-> Compartilhar Falhas
+
+Uma das maneiras de compartilhar as falhas é criar um Fail Wall. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PPT - Pessoas, Processos e Tecnologias
+
+DevOps é PPT. O DevOps é em essência a eficiência colocada em prática nessas três áreas macros. 
+
+Pessoas
+
+DevOps tem haver com pessoas que se comunicam entre si, colaborando, mudando sua mentalidade para que seja possível identificar um conjunto de interesses em comuns. 
+
+O DevOps não é apenas sobre desenvolvedores e operações. É sobre todas as pessoas que participam da criação de um produto, ou de um sistema, e como elas colaboram efetivamente envolvendo todas as disciplinas de uma organização. E essa transformação de cultura deve ser iniciada por elas, as pessoas. 
+
+Para ter a adoção dessa nova Cultura precisamos derrubar barreiras entre as equipes, e também quebrar a estrutura hierárquica que as empresas adotam de modo vertical, tornando-as horizontais. 
+
+O estagiário pode e deve expressar suas ideias igual um nivel de Gerente de Projetos ou mesmo o Diretor da sua empresa de TI. 
+
+Precisamos criar novos papéis, novos títulos e principalmente novas responsabilidades. 
+
+Precisamos garantir que as pessoas tenham foco no serviço e no negócio e não na tecnologia. Precisamos criar laços de confiança uns com os outros. Confiar em todas as pessoas do time e também nas tecnologias adotadas incluindo assim o processo a ser utilizado. 
+
+Também relacionado as pessoas, precisamos trabalhar na capacitação da sua equipe. 
+
+A Cultura DevOps faz parte da transformação digital da sua empresa. Ela é sobre agilidade, disponibilidade e escalabilidade com integração contínua e entrega contínua. E essas estratégias existem novas habilidades tecnológicas. O que levanta a uma dificil questão a ser respondida. Devemos contratar novos colaboradores ou atualizar os conhecimentos dos nossos funcionários. 
+
+O DevOps exige colaboração e cooperação por isso as organizações devem prestar atenção as habilidades sociais.
+
+Precisamos manter dentro da Equipe um ciclo contínuo de treinamentos para prover novas habilidades. E sempre instigá-los para o novo. 
+
+Lembre-se sempre, o progresso do DevOps só acontece quando a empresa está avançando como um todo, com o mesmo objetivo final e execução em mente. E esse avanço só inicia com as pessoas. 
+
+Processos
+
+DevOps requer mudanças fundamentais no processo. Precisamos ter colaboração e desenvolvimento e operações. 
+
+Melhorar e automatizar os processos.
+
+Remover restrições 
+
+Melhorar o fluxo de código para a entrega
+
+Criar loops de feedbacks em todas as fases
+
+E quando falamos em processos queremos falar em entregação contínua ou seja, implantação contínua
+
+Tecnologias
+
+Além de pessoas e processos, tecnologias também é uma parte importante do DevOps. Quando falamos de tecnologias podemos falar de ferramentas. sem adoção de ferramentas não consiguiremos implantar a Cultura de DevOps na nossa empresa. Em todas as partes do DevOps iremos adotar ferramentas para nos auxiliar. Sempre divido em 5 partes:
+
+-> Colaboração
+
+-> Construção
+
+-> Qualidade
+
+-> Implantação
+
+-> Produção
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ferramentas Aplicadas ao DevOps
+
+DevOps é muito mais do que ferramenta. DevOps é uma nova maneira de pensar e trabalhar. É mudar o foco e trabalhar em desenvolviemnto contínuo.
+
+Muitas pessoas pensam em DevOps como ferramentas específicas.
+
+Como Chef, Docker, Jenkins ou até mesmo ferramentas mais abrangentes como o VSTS. VSTS é o antigo nome do Azure DevOps. Mas as ferramentas sozinhas não são DevOps. O que torna as ferramentas DevOps é a maneira de usá-las e não as características fundamentais da própria ferramentas. Ferramenta não é tudo em DevOps. Mas faz parte adotar algumas ou até dezenas de ferramentas para facilitar a adoção dessa nova cultura. O motivo é muito simples, independe da tecnologia que usamos realizaremos integração contínua, provisionamento em nuvem, gerenciamento de configuração, entrega contínua, implantação contínua, monitoramento contínuo e assim por diante. 
+
+Por categoria, diferentes conjuntos de ferramentas podem ser usadas, mas todas executam operações similares. Você, com toda a sua equipe deve definir e sempre experimentar ferramentas que auxiliem nessas tarefas que envolve todo o desenvolvimento de software. Particularmente podemos dividir em 5 grandes etapas relacionados a ferramentas.
+
+Colaboração
+
+-> Gerenciamento de projeto
+
+-> ALM
+
+-> Comunicação
+
+-> ChatOps
+
+-> Compartilhamento
+
+-> Documentação
+
+Construção
+
+-> Versionamento de Código
+
+-> Integração COntínua
+
+-> Build
+
+-> Gerenciamento de BD
+
+Qualidade
+
+-> Teste de Unidade
+
+-> BDD
+
+-> TDD
+
+-> Testes de Segurança
+
+-> Testes de integração 
+
+-> Testes Automatizados
+
+Implantação
+
+-> Ferramentas de Implantação
+
+-> Gerenciamento Configuração
+
+-> Provisionamento
+
+-> Gerenciamento Artefatos
+
+Produção
+
+-> Cloud
+
+-> IaaS
+
+-> PaaS
+
+-> Orquestração e Agendamento
+
+-> BI
+
+-> Monitoramento de Logs
+
+Colaboração é a parte mais vinculada a pessoas. 
+
+-> Gerenciamento de projetos
+
+Ferramentas: JIRA, Basecamp, mingle, Trello
+
+ALM (Gerenciamento do ciclo de vida da aplicação)
+
+-> Azure Devops (VSTS é o antigo nome do Azure Devops)
+
+Comunicação
+
+Ferramentas: slack, HipChat, Microsoft Teams.
+
+ChatOps
+
+Ferramentas: COG, LITA
+
+Compartilhamento
+
+Ferramentas: githubpages, FLARUM, Confluence, RAML, iscourse, Read the Docs.
+
+Documentação
+
+Ferramentas: apiblueprint, swagger, oraphviz
+
+Construção
+
+Versionamento de códigos
+
+-> Ferramentas: Git, TFVC, GitHub, GitLab, Bitbucket.
+
+Integração Contínua
+
+-> Azure Devops
+
+-> Jenkins
+
+-> Bamboo
+
+-> Travis CI
+
+-> drone.io
+
+Build
+
+Ferramentas: MSBuild, Maven, NANT, Gradle, Gulp, sbt.
+
+Gerenciamento de Banco de Dados
+
+Ferramentas: DBmaestro, Flyway, redgate, Flocker. 
+
+Qualidade
+
+Teste de Unidade
+
+Ferramentas: QUnit, Nunit, Unit.net, JUnit.
+
+BDD/TDD
+
+Ferramentas: cucumber, specflow
+
+Teste de Segurança
+
+Ferramentas: OWASP ZAP, 
+
+Teste de integração
+
+Ferramentas: Load Impact, Postman, SoapUI
+
+Testes automatizados
+
+Ferramentas: Selenium, Jasmine, Galen Framework, Jmeter.
+
+Implantação
+
+Ferramentas de Implantação
+
+Ferramentas: Octopus Deploy, Rundeck, Capistrano, urban(code), Deploy
+
+Config/Provisionamento
+
+Ferramentas: puppet labs, Terraform, CHEF, Ansible, Vagrant
+
+Gerenciamento de artefatos
+
+ferramentas: Docker, Docker Registry, Bower, nuget, npm
+
+
+Produção
+
+Cloud/IaaS/PaaS
+
+Ferramentas:
+
+-> Amazon Webservices
+
+-> Microsoft Azure
+
+-> Dokku
+
+-> Heroku
+
+Orquestração e Agendamento
+
+Ferramentas:
+
+-> Docker Swarm
+
+-> Mesophere
+
+-> Rancher
+
+-> Mesos
+
+-> Kubernetes
+
+BI/Monitoramento/Logging
+
+-> elasticsearch
+
+-> logstash
+
+-> Kibana
+
+-> splunk
+
+-> Zabbix
+
+-> Google Analytics
+
+-> Runscope
+
+-> DATADOG
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DevOps Ágil  
+
+A Metodologia Ágil, ou simplesmente o desenvolvimento ágil vai da codificação até a construção da nossa aplicação. 
+
+A parte de integração e testar junto com o desenvolvimento ágil faz parte da integração contínua.
+
+Liberar uma nova versão ou um novo release faz parte da entrega contínua.
+
+Fazendo a implantação desse produto ou serviço em diversos servidores e ambientes faz parte da implantação contínua.
+
+A parte de Operação e Sustentação desse serviço ou produto em conjunto com todos os outros conceitos como desenvolvimento ágil, integração contínua , entrega contínua, implantação contínua, todos eles fazem parte do DevOps, ou seja, DevOps abrange vários conceitos e metodologias. 
+
+A Metodologia àgil tenha sido uma resposta a metodologia waterful ou metodologia em cascata o DevOps não foi uma resposta ao Àgil. As duas teorias na verdade não são as mesmas. Como vimos anteriormente, a Metodologia Agil surgiu bem antes do DevOps. As empresas começaram a ver semelhança entre elas e aumentaram o sucesso e a produtividade ao usá-las em conjunto. 
+
+A Metodologia Ágil envolve iteração contínua de desenvolvimento 
+
+Teste no Ciclo de Vida do Desenvolvimento de Software
+
+Esse método de desenvolviemnto de software enfatiza o desenvolvimento iterativo, incremental e evolutivo. 
+
+O processo de desenvolvimento ágil divide o produto em partes menores e as integra para o produto final. 
+
+Pode ser implementado de várias maneiras, seja, Scrum, Kanban, XP e muitos outros. 
+
+Alguns Pontos Contrastantes Ágil x DevOps
+
+-> Velocidade 
+
+As empresas começaram a adotar a metodologia ágil em desacordo com o Método Waterfoul ou Cascata que trazia sérios problemas principalmente na entrada do produto para o cliente. Em DevOps ser rápido e ter pequenas sprints não é tão prioritário.
+
+-> Implantação
+
+Ultimamente o software é inerente ao ágil, mas o DevOps se preocupa com a implantação apropriada do software. Essa é uma das principais características do DevOps. O DevOps pode implantar um software que foi desenvolvido em várias abordagens, incluindo teorias ágeis e não ágeis, como a abordagem waterfoul que é ainda apropriada para uma determinados projetos e produtos. Outro ponto contrastante é a especialização.
+
+-> Especialização
+
+Métodos Ágeis para Equipes de Opertunidades iguais, dinâmicos onde cada membro do time pode fazer o trabalho dentro da equipe, ou seja, ninguém tem uma função específica. Todos eles podem fazer qualquer tipo de função. Quem desenvolve pode testar, quem testa pode desenvolver. O DevOps por outro lado assume as equipes separadas para desenvolvimento e operações. E as equipes permanecem dentro de suas equipes, mas todas se comunicando com frequência, compartilhando e colaborando para o projeto. 
+
+-> Comunicação
+
+As famosas delimits são o centro das abordagens ágeis. De modo que cada membro da equipe pode compartilhar o progresso, as metas diárias, indicar ajuda quando necessário. Já a implementação de DevOps não é necessário reuniões diárias. 
+
+-> Documentação
+
+As Equipes Ágeis não devem perder tempo com documentação, já o DevOps por outro lado, requer documentos e especificação do projeto para entender completamente uma versão de software, 
+
+-> Tamanho da equipe
+
+No Àgil quanto menor a Equipe e menos pessoas nela mais rápido elas podem se mover e hoje em dia trabalhamos com squads para não ter uma equipe com número excessivo de pessoas. Já o DevOps por outro lado terá muitas equipes trabalhando juntas e cada equipe pode praticar diferentes teorias. 
+
+-> Sprints
+
+Equipes ágeis trabalham períodos curtos e predeterminados. Conhecidos como sprints. Sprints raramente duram mais de um mês. Geralmente 15 dias. Muitas vezes podem ser tão curto quanto uma semana. Ja no DevOps se valoriza a confiabilidade máxima. Por isso eles se concentram em cronograma de longo prazo que minimiza as interrupções no negócio. 
+
+-> Automação
+
+Esse é o coração do DevOps. O objetivo geral é minimizar as interrupções e maximizar a eficiência. Especialmente ao implentar o software. A Metodologia Ágil não requer a automação. 
+
+Essas diferenças nos mostram que Ágil e DevOps não são os mesmos. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+O que o DevOps não é
+
+-> DevOps não é um produto
+
+Não tente vender DevOps como um produto inovador que está em uma estante de mercado, onde apenas aplicando uma quantidade x de valor você conseguirá retorno que vai revoucionar e solucionar qualquer problema da sua empresa da noite para o dia. Veja DevOps como uma mudança de cultura e como toda mudança ela não pode acontecer de uma hora para outra. É preciso paciência, investir tempo testando as melhores maneiras e ferramentas para ajudar nas atividades e com o passar do tempo você sentirá as mudanças.
+
+-> DevOps não é moda
+
+-> DevOps não é um julgamento
+
+-> DevOps não para um clube exclusivo
+
+Um dos princípios do DevOps é a colaboração 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Quiz e Resumo do Módulo
+
+Questão 01
+
+Qual dessas frases define melhor "O que é DevOps"?
+
+a) DevOps é adcionar ferramentas para automação de processos na sua empresa.
+
+b) DevOps é um produto que você pode instalar na sua empresa.
+
+c) DevOps é a cultura focada no Desenvolvimento e Operações e eliminação de processos manuais sempre que possível. 
+
+Questão 02
+
+Por que devo adotar DevOps na minha empresa?
+
+a) Para diminuição de tarefas manuais, melhor colaboração e comunicação.
+
+b) Para eliminar pessoas no meu time.
+
+c) Porque é uma palavra que está na moda. 
+
+Questão 03
+
+Qaundo surgiu o termo DevOps
+
+a) Em 2009, durante palestra relacionados ao Flickr.
+
+b) Em 2001, logo após o Manifesto Ágil.
+
+c) Em 2003, com a framework Google SRE surgiu também o termo DevOps. 
+
+Questão 04
+
+CAMS é:
+
+a) Cultura, Medição, Automação e Documentação.
+
+b) Cultura, Automação, Medição e Compartilhamento.
+
+c) Cultura, Automação e Medição. 
+
+Questão 05
+
+As pessoas devem ter foco na tecnologia e não no negócio. 
+
+a) Correto
+
+b) Incorreto
+
+Introdução ao DevOps - Resumo.
+
+O DevOps compartilha dos princípios ágeis mas precisamos tomar cuidado, por exemplo DevOps se preocupa com a documentação. 
+
+DevOps é Cultura. Você sempre precisará trabalhar com pessoas, processos e tecnologia. E é aí onde entra as ferramentas. E uma delas é o Azure DevOps da Microsoft. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

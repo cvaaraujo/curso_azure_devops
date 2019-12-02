@@ -1,0 +1,131 @@
+Introdução ao Azure DevOps
+
+Aulas práticas são identicadas com o título Hands On no início delas. 
+
+O que é Azure Devops?
+
+Vamos traçar uma linha de tempo da ALM da Microsoft e até olhar um pouco para o futuro e quais os próximos passos. Em outra aula teórica irei abordar as diferenças entre o TFS e o Azure Devops. 
+
+TFS
+
+-> Software empacotado
+
+-> Necessidade de Hardware
+
+-> SysAdmin
+
+-> Atualizações Demoradas
+
+Azure Devops 
+
+-> Nuvem
+
+-> Sem necessidade de Hardware
+
+-> Sem SysAdmin
+
+-> Atualizações Constantes
+
+Vamos iniciar com a criação da sua conta no Azure DevOps, logo após vamos habilitar as novas features do Azure DevOps que até janeiro de 2019 estava em preview. 
+
+Vamos fazer um tour pelo Azure DevOps pra conhecer todo o potencial dessa plataforma. 
+
+Vamos falar os tipos de contas disponíveis no Azure DevOps bem como os seus valores. Em uma aula prática vamos criar diversas contas com diferentes tipos. 
+
+Vamos vincular a sua conta do Azure ao Azure DevOps em uma rápida aula prática. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+O que é o Azure DevOps?
+
+Caso você já tenha usado o Azure DevOps ou sua versão antiga TFS (on premise), 
+
+Azure DevOps é a plataforma de DevOps da Microsoft. Será o seu software para o ciclo de vida para aplicativos. O chamado ALM (Application Lifecycle Manager). E ciclo de vida de aplicativo tem tudo haver com DevOps. E é um termo até mais antigo que o próprio DevOps. Mas isso não significa que você somente usará o Azure DevOps na sua empresa. Mas sim ele funcionará como uma ferramenta para gerenciamento, acompanhamento e como principal ferramenta para aplicar a cultura do DevOps. 
+
+O Azure DevOps é a evolução do VSTS (Visual Studio Team Services). E o VSTS é a versão online do TFS (Team Fundation Service. 
+
+Tanto no Azure DevOps como no TFS teremos muitas coisas interessantes e únicas. Pois é a única ferramenta que unifica todas as etapas do DevOps ou pelo menos é uma das mais utilizadas. 
+
+Azure Boards
+
+Azure Boards se refere a o todo gerenciamento do seu projeto. A criação de histórias, tarefas, bugs, planejamento de horas por atividade, braindown, velocidade do time e esforço aplicados a tarefa. E temos três tipos principais:
+
+Chamamos de modelos de processos. São eles:
+
+-> SCRUM
+
+-> Ágile
+
+-> CMMI
+
+Cada tipo tem a sua característica. 
+
+Com o Azure DevOps você pode planejar e gerenciar todo o seu projeto. 
+
+Azure Pipeline
+
+É a minha parte predileta. É aqui que podemos adicionar integração contínua, ou seja, quando fizer um commit dispara uma rotina para fazer um build da aplicação, fazer testes unitários avaliar a qualidade do código com o sonar e muitos outros. E também é onde teremos as releases. Onde faremos a entrega contínua mantendo nossa aplicação atualizada de forma automática. Podendo adicionar aprovações para subir aos mais distintos ambientes. 
+
+Azure Repos
+
+Nele temos o nosso Git. Podemos utilizar ainda o TFVC, repositório proprietário da Microsoft que está cada vez mais perdendo espaço para o Git. Podemos criar inúmeros repositórios privados, e também públicos. E ultimamente com a aquisição do GitHub pela Microsoft podemos unir facilmente com o repositório do GitHub além de claro qualquer outro repositório. Seja online como o GitLab ou um repositório on premise. 
+
+Azure Test Plans
+
+Nele podemos adicionar testes unitários, testes funcionais, teste de carga e muito mais. Temos ferramenta excelente para toda essa parte de validação de qualidade da nossa aplicação. Abordaremos um pouco disso no módulo sobre Qualidade. 
+
+Azure Artifacts
+
+Com ele podemos compartilhar pacotes nuggets, maven, rpm de fontes públicas e privadas com toda a sua equipe. Além disso pense no Azure DevOps como um orquestrador onde podemos adicionar mais ferramentas e fortalecer ainda a plataforma de DevOps da sua empresa. Podemos unir com Jenkins, caso a sua empresa já utilize para integração contínua, podemos vincular ao slack e fornecer uma comunicação mais direta com os seus colaboradores e também podemos integrar com Sonar e com o Sonar Cloud controlando e gerenciando a qualidade do nosso código. Mostraremos sobre o slack no módulo de comunicação. e sobre o Sonar Cloud no modo de qualidade. 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timeline do Azure DevOps
+
+História por trás do Azure DevOps. Como chegamos até aqui e os próximos passos.
+
+Muito tempo do termo DevOps surgir em 2005, a Microsoft lançou o Visual Studio Team System 2005 e o Visual Studio Team System Explorer. São ferramentas on premise e são antecessores da TFS. Eles permitiam que o usuário ingressasse no ciclo de vida do desenvolvimento de software com suporte integrado para controle de versão, gerenciamento de build e relatórios detalhados que mostram tendências de bugs, velocidade de projeto e indicadores de qualidade, ou seja, uma versão mais reduzida do que temos hoje. Era uma ferramenta bem avançada, mas pouco explorada e utilizada. 
+
+Em 2008 surgiu o Visual Studio Team System 2008, essa ferramenta foi uma evolução gradual do Visual Studio Team System 2005. Já em 2010 surgiu o TFS com o nome de Team Fundation Server 2010. O TFS 2010 como ficou conhecido surgiu como um conjunto abrangente de serviços que permite aos desenvolvedores e equipes gerenciar praticamente todos os aspectos do ciclo de vida do aplicativo. Essa era a terceira versão de aplicativos da Microsoft para ciclo de vida. O TFS 2010 representou uma grande atualização sobre os seus antecessores, 2008 e 2005. O TFS trouxe duas grandes vantagens para o desenvolvedor do Visual Studio. 
+
+1) Um ambiente abrangente que cobria todos os principais aspectos do ciclo de vida do aplicativo e surgiu como uma ferramenta totalmente integrada ao Visual Studio e também integrada a outras ferramentas da Microsoft. Como o Microsoft Sharepoint. A principal competencia do TFS até esse momento sempre foi o controle de código fonte independente de qual versão do Visual Studio vc tinha vc poderia ter acesso a esse código fonte. Já em 2012 o TFS teve sua evolução natural e foi uma grande evolução. Nesse momento o Mundo Ágil estava entrando nos projetos e cada vez mais as empresas queriam um gerenciamento mais ágil de seus projetos. Ele veio com uma nova interface Visual, para gerenciar e acompanhar o backlog, tarefas, bugs, e adotou três tipos de templates, SCRUM, Àgil e CMMI. E eles são utilizados até hoje. 
+
+Em 2012 surgiu a primeira versão online. ou seja, na nuvem chamada de Team Fundation Server Preview. Era a versão Web do TFS mas com pouquíssimos usuários. Serviu apenas como entrada. pois em 2013 tivemos um novo projeto chamado de Visual Studio Online. Nele tinhamos controle de versão, parte de teste, metodologias de desenvolvimento ágil, implantação e uma versão bem rústica que temos hoje nos pipelines. Ele teve uma certa popularidade pois era gratuito até 5 usuários e podia ser integrado a outras IDEs, não vinculado apenas ao Visual Studio. 
+
+Já em 2013 surgiu o Team Fundation Server 2013 (TFS 2013), essa versão entrou em diversas grandes empresas. E foi aonde a ferramenta se tornou popular principalmente pra quem é do mundo Microsoft. Nessa versão a parte de gerenciamento foi apefeiçoada, principalmente a parte do uso de templates do SCRUM, temos gráficos e claro, o versionamento pelo Git. Outro ponto legal foi a inclusão de gerenciamento de testes. O famoso Microsoft Teste Manager, introduzido no TFS 2010 ele teve atualizações. E no TFS 2013 fornceu a capacidade necessária de acessar esses planos de testes e casos de testes do Portal Web do TFS. 
+
+Já em 2015 surgiu a versão do TFS 2015, uma atualização da versão 2013. A parte do quadro de Kan Ban foi aprimorada, o novo sistema pra build, bem parecido com o que temos hoje, como as definições de Build. 
+
+Já em 2016 o Visual Studio Online mudou de novo e se tornou o VSTS. Agora ele estava mais parecido com o TFS. Mas com a vantagem de ser atualizado constantemente. 
+
+Em 2017 surgiu o TFS 2017. E agora temos versionamento de tarefas nas definições de build e release e também roolback nas definições de build, ou seja vc poderia reverter uma versão de build para uma versão anterior, tivemos também melhoria nos peters e suporte ao npm. 
+
+Em 2018 tivemos a versão do TFS 2018, que é a versão mais recente bem parecido com Azure Devops. A principal novidade foi a inclusão da wiki. E para o final de 2018 tivemos atualização do VSTS. Onde a principal mudança foi nome. Agora passamos de Visual Studio Team Service para Azure Devops. 
+
+Alem do nome o Azure Devops ganhou uma interface mais amigável. O Azure Devops atualiza constantemente e muitas vezes sem avisar o usuário, mas geralmente essas versões são visuais, e sempre vem para ajudar o usuário final. 
+
+No futuro o antigo TFS se chamará Azure Devops Server e será cada vez mais parecido com Azure Devops.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Diferenças do Azure DevOps para o TFS
+
+Azure DevOps e o TFS tem o mesmo propósito: ser o seu software para Gerenciamento de Ciclo de Vida de Aplicativos (ALM).
+
+Por que a Microsoft tem esses mesmos produtos que fazem a mesma coisa
+
+O TFS é o Team Fundation Server. Ele é um servidor. E precisa ser instalado em um servidor. Sua instalação é extremamente simples. Basicamente é next, next, next e finish. Portanto o TFS é um software empacotado. Essa é principal diferença entre eles pois o Azure Devops é na nuvem. Você não se preocupa com nada. Apenas precisa criar uma conta e menos de 3 minutos já está pronto. 
+
+Quais as vantagens de ter nunvem além de criar uma conta. 
+
+Você não precisa se preocupar com hardware. Quem além de um preço altíssimo, gera um custo mensal com energia elétrica, a contratação de SysAdmin e tudo que as empresas estão querendo tirar do seu skill. 
+
+Trabalhar na Nuvem é algo irreversível. Além disso, o TFS sofre uma atualização anual. Por exemplo, a primeira versão do TFS foi em 2005, com outro nome e depois de 3 anos lançaram a de 2008. Em 2010 lançaram o TFS, 2012, 2015, 2017 e agora em 2018. 
+
+Ja o Azure Devops sofre constante atualizações principalmente no layout e na usabilidade. As alterações no 
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+Azure Devops
+
+Talvez vc conheça por outros nomes como TFS, VSTS, VSO. Basicamente é tudo a mesma coisa. 
+
+Como funciona o Azure Devops?
+
+Como vc trabalha com o Azure Devops.
+
+Julio Arruda - MVP Microsoft
+
+Treinamento Gerenciamento e Operação do Azure DevOps 
+
+Você quer aprender mais sobre o que é o Azure DevOps (antigo Visual Studio Team Services ou VSTS), e como utilizá-lo para apoiá-lo em seu cenário de DevOps? Então veio ao lugar certo, neste treinamento, vamos aprender desde criar sua conta no Visual Studio Team Services até publicar seus projetos em ambientes de Nuvem e ONPremisses, além de ver como funcionam diversas integrações desta ferramenta. 
+
+Veja alguns tópicos que você aprenderá encontrar neste treinamento:
+
+-> Criação de Conta
+
+-> Criação de Team Projects
+
+-> Criação de Repositórios GIT
+
+-> Configuração de Políticas de Segurança para seu Repositório GIT
+
+-> Criação de Repositórios TFVC
+
+-> Como trabalhar com WorkItems
+
